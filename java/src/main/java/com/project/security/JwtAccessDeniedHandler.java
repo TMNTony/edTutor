@@ -18,5 +18,6 @@ public class JwtAccessDeniedHandler implements AccessDeniedHandler {
         // Here you can place any message you want
         response.sendError(HttpServletResponse.SC_FORBIDDEN, accessDeniedException.getMessage());
     }
+
 }
 
