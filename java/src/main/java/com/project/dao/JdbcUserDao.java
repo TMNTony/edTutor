@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 import com.project.exception.DaoException;
-import com.project.model.RegisterUserDto;
+import com.project.dto.RegisterUserDto;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;

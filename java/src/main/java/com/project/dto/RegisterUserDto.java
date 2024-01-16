@@ -1,4 +1,4 @@
-package com.project.model;
+package com.project.dto;
 
 import javax.validation.constraints.NotEmpty;
 /*

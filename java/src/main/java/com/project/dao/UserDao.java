@@ -1,6 +1,6 @@
 package com.project.dao;
 
-import com.project.model.RegisterUserDto;
+import com.project.dto.RegisterUserDto;
 import com.project.model.User;
 
 import java.util.List;
