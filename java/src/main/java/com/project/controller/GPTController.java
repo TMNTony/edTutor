@@ -10,23 +10,17 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:5173")
 @RequestMapping("/GPT")
 public class GPTController {
-    private final String model;
-    private final String url;
-    private final RestTemplate template;
+    @Value("${openai.model}")
+    private String model;
+
+    @Value("${openai.api.url}")
+    private String url;
 
     @Autowired
-    public GPTController(
-            @Value("${openai.model}") String model,
-            @Value("${openai.api.url}") String url,
-            RestTemplate template
-    ) {
-        this.model = model;
-        this.url = url;
-        this.template = template;
-    }
+    private RestTemplate template;
 
     @GetMapping("/chat")
     public String chat(@RequestParam("prompt") String prompt) {
